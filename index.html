@@ -13,10 +13,10 @@
   <body>
     <nav>
       <ul>
-        <a href="#clock"><li><i class="fa-solid fa-clock"></i> Clock</li></a>
-        <a href="#alarm"><li><i class="fa-solid fa-bell"></i> Alarm</li></a>
-        <a href="#stopwatch"><li><i class="fa-solid fa-stopwatch"></i> Stopwatch</li></a>
-        <a href="#timer"><li><i class="fa-solid fa-hourglass"></i> Timer</li></a>
+        <li><a href="#clock"><i class="fa-solid fa-clock"></i> Clock</a></li>
+        <li><a href="#alarm"><i class="fa-solid fa-bell"></i> Alarm</a></li>
+        <li><a href="#stopwatch"><i class="fa-solid fa-stopwatch"></i> Stopwatch</a></li>
+        <li><a href="#timer"><i class="fa-solid fa-hourglass"></i> Timer</a></li>
       </ul>
     </nav>
     <main>
@@ -33,14 +33,14 @@
             <section class="alarms">
               <input type="time" min="00:00" max="23:59" step="1" />
               <section class="controls">
-                <button class="start"><i class="fa-solid fa-play"></i></button>
-                <button class="delete"><i class="fa-solid fa-trash"></i></button>
+                <button class="start" aria-label="Start"><i class="fa-solid fa-play"></i></button>
+                <button class="delete" aria-label="Delete"><i class="fa-solid fa-trash"></i></button>
               </section>
             </section>
           </template>
           <section class="items"></section>
           <section class="controls">
-            <button class="add"><i class="fa-solid fa-plus"></i></button>
+            <button class="add" aria-label="Add"><i class="fa-solid fa-plus"></i></button>
           </section>
         </x-alarm>
       </section>
@@ -49,8 +49,8 @@
         <x-stopwatch>
           <time datetime="PT0S">00:00:00.00</time>
           <section class="controls">
-            <button class="start"><i class="fa-solid fa-stopwatch"></i></button>
-            <button class="restart"><i class="fa-solid fa-rotate-right"></i></button>
+            <button class="start" aria-label="Start"><i class="fa-solid fa-stopwatch"></i></button>
+            <button class="restart" aria-label="Restart"><i class="fa-solid fa-rotate-right"></i></button>
           </section>
         </x-stopwatch>
       </section>
@@ -63,9 +63,9 @@
             <input type="time" min="00:00" max="23:59" step="1" value="00:01" />
           </section>
           <section class="controls">
-            <button id="start" class="start"><i class="fa-solid fa-play"></i></button>
-            <button class="restart"><i class="fa-solid fa-rotate-right"></i></button>
-            <button class="loop"><i class="fa-solid fa-repeat"></i></button>
+            <button id="start" class="start" aria-label="Start"><i class="fa-solid fa-play"></i></button>
+            <button class="restart" aria-label="Restart"><i class="fa-solid fa-rotate-right"></i></button>
+            <button class="loop" aria-label="Loop"><i class="fa-solid fa-repeat"></i></button>
           </section>
         </x-timer>
       </section>

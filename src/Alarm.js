@@ -22,7 +22,7 @@ export default class Alarm extends HTMLElement {
             alarm.setAttribute("ringing", "");
             sound.play()
             if(notified == false){
-            notify("Alarm", "Your alarm for" + date +" is ringing!!")
+            notify("Alarm", "Your alarm for is ringing!!")
             notified = true  
           }
             return;
