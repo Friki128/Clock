@@ -1,5 +1,6 @@
 import { notify } from "./app.js";
 let sound = document.getElementById("alarmSound")
+let notified = false
 export default class Alarm extends HTMLElement {
   
   #intervalCallback;
@@ -20,12 +21,16 @@ export default class Alarm extends HTMLElement {
           if (delta > 0 && delta < new Date(this.duration)) {
             alarm.setAttribute("ringing", "");
             sound.play()
+            if(notified == false){
             notify("Alarm", "Your alarm for" + date +" is ringing!!")
+            notified = true  
+          }
             return;
           }
         }
         sound.pause()
         sound.currentTime=0
+        notified = false
         alarm.removeAttribute("ringing");
         
       });

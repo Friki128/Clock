@@ -117,7 +117,6 @@ export default class Timer extends HTMLElement {
       event.target.innerHTML = "<i class=\"fa-solid fa-play\"></i>"
       this.pause();
     } else if (classList.contains("restart")) {
-      audio.removeAttribute("autoplay")
       this.restart();
     } else if (classList.contains("start")) {
       classList.add("pause")
