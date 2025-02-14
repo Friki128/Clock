@@ -1,3 +1,4 @@
+import { notify } from "./app.js";
 let sound = document.getElementById("timerSound")
 let start = document.getElementById("start")
 export default class Timer extends HTMLElement {
@@ -32,6 +33,7 @@ export default class Timer extends HTMLElement {
       } else {
         clearInterval(this.#intervalId);
         sound.play()
+        notify("Timer", "The timer is up")
         start.innerHTML = "<i class=\"fa-solid fa-play\"></i>"
         start.classList.remove("pause");
         start.classList.add("start")

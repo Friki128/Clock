@@ -1,3 +1,4 @@
+import { notify } from "./app.js";
 let sound = document.getElementById("alarmSound")
 export default class Alarm extends HTMLElement {
   
@@ -19,6 +20,7 @@ export default class Alarm extends HTMLElement {
           if (delta > 0 && delta < new Date(this.duration)) {
             alarm.setAttribute("ringing", "");
             sound.play()
+            notify("Alarm", "Your alarm for" + date +" is ringing!!")
             return;
           }
         }
