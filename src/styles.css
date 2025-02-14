@@ -1,14 +1,14 @@
 *{
   --color-1: #FBF5E5;
   --color-2: #C890A7;
-  --color-3: #A35C7A;
+  --color-3: #A05A77;
   --color-4: #212121;
 }
 
 body {
   background-color: var(--color-1);
   display: flex;
-  color: var(--color-2);
+  color: var(--color-3);
   flex-direction: column;
   margin: 0;
   height: 100vh;
@@ -24,15 +24,15 @@ a{
   display: block;
   height: 100%;
   width: 100%;
-  color: var(--color-2);
+  color: var(--color-3);
   text-decoration: none;
   flex: 1 1 auto;
-  border: 3px solid var(--color-2);
+  border: 3px solid var(--color-3);
   line-height: 300%;
 }
 
 a:hover{
-  background: var(--color-2);
+  background: var(--color-3);
   color: var(--color-1)
   
 }
@@ -121,9 +121,15 @@ h1{
 @media (prefers-color-scheme: dark){
   body{
     background-color: var(--color-4);
+    color: var(--color-2);
   }
   a:hover{
-    color:var(--color-4)
+    color:var(--color-4);
+    background-color: var(--color-2);
+  }
+  a{
+  color: var(--color-2);
+  border: 3px solid var(--color-2);
   }
 }
 
