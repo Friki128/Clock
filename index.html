@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Time</title>
+    <link rel="stylesheet" href="./src/styles.css" />
+    <link rel="icon" href="src/icon.webp" type="image/x-icon">
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <a href="#clock"><li><i class="fa-solid fa-clock"></i> Clock</li></a>
+        <a href="#alarm"><li><i class="fa-solid fa-bell"></i> Alarm</li></a>
+        <a href="#stopwatch"><li><i class="fa-solid fa-stopwatch"></i> Stopwatch</li></a>
+        <a href="#timer"><li><i class="fa-solid fa-hourglass"></i> Timer</li></a>
+      </ul>
+    </nav>
+    <main>
+      <section id="clock">
+        <h1>Clock</h1>
+        <x-clock>
+          <time>00:00:00</time>
+        </x-clock>
+      </section>
+      <section id="alarm">
+        <h1>Alarms</h1>
+        <x-alarm>
+          <template>
+            <section class="alarms">
+              <input type="time" min="00:00" max="23:59" step="1" />
+              <section class="controls">
+                <button class="start"><i class="fa-solid fa-play"></i></button>
+                <button class="delete"><i class="fa-solid fa-trash"></i></button>
+              </section>
+            </section>
+          </template>
+          <section class="items"></section>
+          <section class="controls">
+            <button class="add"><i class="fa-solid fa-plus"></i></button>
+          </section>
+        </x-alarm>
+      </section>
+      <section id="stopwatch">
+        <h1>Stop Watch</h1>
+        <x-stopwatch>
+          <time datetime="PT0S">00:00:00.00</time>
+          <section class="controls">
+            <button class="start"><i class="fa-solid fa-stopwatch"></i></button>
+            <button class="restart"><i class="fa-solid fa-rotate-right"></i></button>
+          </section>
+        </x-stopwatch>
+      </section>
+      <section id="timer">
+        <h1>Timer</h1>
+        <x-timer>
+          <time datetime="PT0S">00:00:00.00</time>
+          <section class="items">
+            <input type="time" min="00:00" max="23:59" step="1" value="00:03" />
+            <input type="time" min="00:00" max="23:59" step="1" value="00:01" />
+          </section>
+          <section class="controls">
+            <button id="start" class="start"><i class="fa-solid fa-play"></i></button>
+            <button class="restart"><i class="fa-solid fa-rotate-right"></i></button>
+            <button class="loop"><i class="fa-solid fa-repeat"></i></button>
+          </section>
+        </x-timer>
+      </section>
+    </main>
+    <audio id="alarmSound" src="src/Alarm.mp3" loop></audio>
+    <audio id="timerSound" src="src/Timer.mp3"></audio>
+    <script type="module" src="./src/app.js"></script>
+    <script src="https://kit.fontawesome.com/68c666fa1d.js" crossorigin="anonymous"></script>
+  </body>
+</html>
