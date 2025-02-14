@@ -3,7 +3,6 @@ import Clock from "./Clock.js";
 import Stopwatch from "./Stopwatch.js";
 import Timer from "./Timer.js";
 
-Notification.requestPermission()
 let icon = "./icon.webp"
 export function notify(title ,text){
 new Notification(title, {body: text, icon:icon})

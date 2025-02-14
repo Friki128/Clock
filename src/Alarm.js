@@ -64,6 +64,7 @@ export default class Alarm extends HTMLElement {
   }
 
   handleEvent(event) {
+    Notification.requestPermission()
     const { target } = event;
     const { classList } = event.target;
     if (classList.contains("add")) {

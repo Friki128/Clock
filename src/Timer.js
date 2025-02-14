@@ -99,6 +99,7 @@ export default class Timer extends HTMLElement {
   }
 
   handleEvent(event) {
+    Notification.requestPermission()
     const { classList } = event.target;
     if (classList.contains("loop")) {
       classList.add("no-loop")
